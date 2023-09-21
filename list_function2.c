@@ -4,31 +4,31 @@
 /**
  * insert_dnodeint_at_index - inserts a node at a given index
  * in a doubly linked list
- * @head: double pointer to the list
- * @index: index of the node to insert
- * @num: data to insert
+ * @h: double pointer to the list
+ * @idx: index of the node to insert
+ * @n: data to insert
  *
  * Return: address of the new node, or NULL if it failed
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int index, int num)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
 	dlistint_t *new;
-	dlistint_t *temp = *head;
+	dlistint_t *temp = *h;
 
-	if (index == 0)
-		return (add_dnodeint(head, num));
+	if (idx == 0)
+		return (add_dnodeint(h, n));
 
-	for (i = 0; temp && i < index; i++)
+	for (i = 0; temp && i < idx; i++)
 	{
-		if (i == index - 1)
+		if (i == idx - 1)
 		{
 			if (temp->next == NULL)
-				return (add_dnodeint_end(head, num));
+				return (add_dnodeint_end(h, n));
 			new = malloc(sizeof(dlistint_t));
-			if (!new || !head)
+			if (!new || !h)
 				return (NULL);
-			new->n = num;
+			new->n = n;
 			new->next = NULL;
 			new->next = temp->next;
 			new->prev = temp;

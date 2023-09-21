@@ -11,7 +11,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
 /* list_function2.c */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int index, int num);
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int num);
 void free_dlistint(dlistint_t *head);
 
