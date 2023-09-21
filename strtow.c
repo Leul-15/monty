@@ -3,7 +3,7 @@
 
 /**
  * count_word - helper function to count the number of words in a string
- * @s: string to evaluate
+ * @str: string to evaluate
  *
  * Return: number of words
  */
@@ -59,7 +59,7 @@ char **strtow(char *str)
 				if (new == NULL)
 					return (NULL);
 				while (head < tail)
-					*new ++ = str[head++];
+					*new++ = str[head++];
 				*new = '\0';
 				mtrx[count] = new - c;
 				count++;
